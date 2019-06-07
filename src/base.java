@@ -10,7 +10,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class base {
 
-	public static void main(String[] args) throws MalformedURLException {
+	public static AndroidDriver<AndroidElement> CapabilitiesofRealDevice() throws MalformedURLException {
 		// TODO Auto-generated method stub
 
 		File appDir = new File("src");
@@ -20,5 +20,7 @@ public class base {
 		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		return driver;
+		
 }
 }
